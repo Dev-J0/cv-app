@@ -46,3 +46,11 @@ body {
     color: #F1F0EA;
     margin-left: 5px;
   }
+
+  .Basic-Info {
+    width: 160vh;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  
+  }

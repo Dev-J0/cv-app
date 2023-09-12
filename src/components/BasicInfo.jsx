@@ -6,16 +6,12 @@ function BasicInfo() {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState ('');
     const [title, setTitle] = useState ('');
-    const [summary, setSummary] = useState ('');
     const [isRegistered, setIsRegistered] = useState(false);
     
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
     };
 
-    const handleSummaryChange = (event) => {
-        setSummary(event.target.value);
-    };
 
     const handleFirstNameChange = (event) => {
         setFirstName(event.target.value);
@@ -48,7 +44,6 @@ function BasicInfo() {
     setFirstName('');
     setLastName('');
     setPhoneNumber('');
-    setSummary('');
    }
 
     return (
@@ -56,7 +51,6 @@ function BasicInfo() {
         {isRegistered ? (
             <>
             <p>Title : {title}</p>
-            <p>Summary {summary}</p>
             <p>First Name : {firstName}</p>
             <p>Last Name : {lastName}</p>
             <p>Phone : {phoneNumber}</p>
@@ -68,10 +62,6 @@ function BasicInfo() {
             <form onSubmit={handleSubmit}>
                 <label>
                     Title : <input type="text" value={title} onChange={handleTitleChange}
-                    />
-                </label>
-                <label>
-                    Summary: <input type="textarea" value={summary} onChange={handleSummaryChange}
                     />
                 </label>
                 <label>
