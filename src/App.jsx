@@ -3,6 +3,7 @@ import './styles/style.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import BasicInfo from './components/BasicInfo'
+import SkillsInfo from './components/SkillsInfo'
 
 function App() {
   
@@ -12,7 +13,7 @@ function App() {
         <Header />
   </div>
     <BasicInfo />
-
+    <SkillsInfo />
 
 
 
