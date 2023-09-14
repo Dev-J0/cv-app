@@ -23,28 +23,30 @@ function SkillsInfo() {
     };
   
     return (
-      <div>
-        <h2>Skills</h2>
         <div>
-          <input
-            type="text"
-            placeholder="Enter a skill"
-            value={skill}
-            onChange={handleSkillChange}
-          />
-          <button onClick={addSkill}>Add Skill</button>
+          <h2>Technical Skills</h2>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter a skill"
+              value={skill}
+              onChange={handleSkillChange}
+            />
+            <button className="plus-button"onClick={addSkill}>+</button>
+          </div>
+          <ul>
+            {skillsList.map((s, index) => (
+              <li key={index}>
+                {s}
+                <button className="remove-button" onClick={() => removeSkill(index)}>
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul>
-          {skillsList.map((s, index) => (
-            <li key={index}>
-              {s}
-              <button onClick={() => removeSkill(index)}>Remove</button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
+      );
+    }
   
 
 export default SkillsInfo

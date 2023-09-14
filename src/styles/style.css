@@ -54,3 +54,13 @@ body {
     gap: 4rem;
   
   }
+
+  @media print {
+    .remove-button,
+    .reset-button,
+    .edit-button,
+    .plus-button
+     {
+      display: none;
+    }
+  }

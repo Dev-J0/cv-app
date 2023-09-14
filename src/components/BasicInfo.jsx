@@ -55,8 +55,8 @@ function BasicInfo() {
             <p>Last Name : {lastName}</p>
             <p>Phone : {phoneNumber}</p>
             <p>Email : {email}</p>           
-            <button onClick={handleEdit}>Edit</button> 
-            <button onClick={handleReset}>Reset</button>
+            <button className="edit-button" onClick={handleEdit}>Edit</button> 
+            <button className="reset-button" onClick={handleReset}>Reset</button>
             </>
         ) : (
             <form onSubmit={handleSubmit}>
@@ -80,7 +80,7 @@ function BasicInfo() {
                     Email: <input type="email" value={email} onChange={handleEmailChange}
                     />
                 </label>
-                <button type="submit">Validate information</button>
+                <button className="submit-button" type="submit">Validate information</button>
 
                 </form>
             )}
