@@ -37,7 +37,6 @@ function Header() {
         {!isRegistered ? (
           <>
             <label>
-            
               <input
                 type="text"
                 placeholder="Title"
@@ -46,7 +45,6 @@ function Header() {
               />
             </label>
             <label>
-            
               <input
                 type="text"
                 placeholder="First name"
@@ -55,7 +53,6 @@ function Header() {
               />
             </label>
             <label>
-             
               <input
                 type="text"
                 placeholder="Last name"

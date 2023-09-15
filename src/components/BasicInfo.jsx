@@ -1,15 +1,28 @@
 import { useState } from "react";
+import { FaSquarePhone } from 'react-icons/fa6';
+import { MdEmail } from 'react-icons/md';
+import { CgWebsite } from 'react-icons/cg';
+import { FaLocationDot } from 'react-icons/fa6'
 
 function BasicInfo() {
  
   const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
+  const [website, setWebsite] = useState('');
+  const [location, setLocation] = useState('');
   const [isRegistered, setIsRegistered] = useState(false);
 
 
+  const handleWebsiteChange = (e) => {
+    setWebsite(e.target.value)
+};
+
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value)
+};
 
   const handlePhoneNumberChange = (event) => {
-    setPhoneNumber(event.target.value);
+    setPhoneNumber(event.target.value)
   };
 
   const handleEmailChange = (event) => {
@@ -26,19 +39,20 @@ function BasicInfo() {
   };
 
   const handleReset = () => {
-  
     setEmail('');
-
+    setLocation('');
     setPhoneNumber('');
+    setWebsite('');
   };
 
   return (
     <div className="Basic-Info">
       {isRegistered ? (
         <>
-
-          <p>Phone : {phoneNumber}</p>
-          <p>Email : {email}</p>
+          <p><FaSquarePhone />{phoneNumber}</p>
+          <p><MdEmail /> {email}</p>
+          <p><CgWebsite /></p>
+          <p><FaLocationDot /></p>
           <button className="edit-button" onClick={handleEdit}>
             Edit
           </button>
@@ -48,9 +62,6 @@ function BasicInfo() {
         </>
       ) : (
         <form onSubmit={handleSubmit}>
-         
-    
-
           <label>
             Phone:{" "}
             <input
@@ -69,6 +80,17 @@ function BasicInfo() {
               onChange={handleEmailChange}
             />
           </label>
+        <label>
+            {" "}
+            <input type="text" placeholder="Website" value ={website} onChange={handleWebsiteChange}
+            />
+        </label>
+        <label>
+            {" "}
+            <input type="text" placeholder="Location" value={location} onChange={handleLocationChange}
+            />
+        </label>
+
           <button className="submit-button" type="submit">
             Validate information
           </button>
@@ -77,5 +99,6 @@ function BasicInfo() {
     </div>
   );
 }
+
 
 export default BasicInfo;
