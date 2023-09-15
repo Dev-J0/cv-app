@@ -59,8 +59,9 @@ body {
     .remove-button,
     .reset-button,
     .edit-button,
-    .plus-button
-     {
+    .plus-button,
+    .inspired,
+    .header-h2 {
       display: none;
     }
   }

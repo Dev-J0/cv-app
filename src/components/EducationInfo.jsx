@@ -4,3 +4,12 @@
 //starting year - ending year 
 //button for (still in school)
 //additional educational info
+
+function EducationInfo() {
+    
+
+
+
+}
+
+export default EducationInfo
