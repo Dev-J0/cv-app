@@ -63,7 +63,7 @@ function BasicInfo() {
       ) : (
         <form onSubmit={handleSubmit}>
           <label>
-            Phone:{" "}
+           {" "}
             <input
               type="number"
               placeholder="Phone"
@@ -72,7 +72,7 @@ function BasicInfo() {
             />
           </label>
           <label>
-            Email:{" "}
+           {" "}
             <input
               type="email"
               placeholder="Email"

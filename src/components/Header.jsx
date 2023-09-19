@@ -1,81 +1,109 @@
-import{ useState } from "react";
+import { useState } from "react";
+import { GrValidate } from "react-icons/gr"
 
 function Header() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [title, setTitle] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [title, setTitle] = useState('');
   const [isRegistered, setIsRegistered] = useState(false);
+  const [editMode, setEditMode] = useState(false);
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
+    setEditMode(true); 
   };
 
   const handleLastNameChange = (event) => {
     setLastName(event.target.value);
+    setEditMode(true); 
   };
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
+    setEditMode(true); 
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsRegistered(true);
+    setEditMode(false); 
   };
 
   const handleEdit = () => {
+    setEditMode(true);
     setIsRegistered(false);
   };
 
+  const handleReset = () => {
+    setFirstName('');
+    setLastName('');
+    setTitle('');
+    setEditMode(false); 
+  };
+
   return (
-    <>
-      <h1>Resume</h1>
+    <div className="Basic-Info">
+      <div className="resume-title">
+        <h1 className="the-title">Resume</h1>
+      </div>
       <h2 className="header-h2">
         Please fill in the information to put together a professional CV!
       </h2>
       <div className="name-info">
-        {!isRegistered ? (
+        {isRegistered ? (
           <>
+          <div className="name-container">
+            <p>{firstName}</p>
+            <p>{lastName}</p>
+          </div>
+          <div className="title-container">
+            <p>{title}</p>
+          </div>
+          <div className="header-buttons">
+            <button className="edit-button" onClick={handleEdit}>
+              Edit
+            </button>
+            <button className="reset-button" onClick={handleReset}>
+              Reset
+            </button>
+            </div>
+          </>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <label>
+              <input
+                type="text"
+                placeholder="First Name"
+                value={firstName}
+                onChange={handleFirstNameChange}
+                className={editMode ? "edit-mode" : ""}
+              />
+            </label>
+            <label>
+              <input
+                type="text"
+                placeholder="Last Name"
+                value={lastName}
+                onChange={handleLastNameChange}
+                className={editMode ? "edit-mode" : ""}
+              />
+            </label>
             <label>
               <input
                 type="text"
                 placeholder="Title"
                 value={title}
                 onChange={handleTitleChange}
+                className={editMode ? "edit-mode" : ""}
               />
             </label>
-            <label>
-              <input
-                type="text"
-                placeholder="First name"
-                value={firstName}
-                onChange={handleFirstNameChange}
-              />
-            </label>
-            <label>
-              <input
-                type="text"
-                placeholder="Last name"
-                value={lastName}
-                onChange={handleLastNameChange}
-              />
-            </label>
-            <button className="submit-button" onClick={handleSubmit}>
-              Submit
+            <button className="submit-button" type="submit">
+               <GrValidate />
             </button>
-          </>
-        ) : (
-          <>
-            <p className="title"> {title}</p>
-            <p className="firstName"> {firstName}</p>
-            <p className="lastName"> {lastName}</p>
-            <button className="edit-button" onClick={handleEdit}>
-              Edit
-            </button>
-          </>
+          </form>
         )}
       </div>
-    </>
+    </div>
   );
 }
 
