@@ -123,8 +123,8 @@ body {
 ::placeholder {
   background-color: #474448c5;
   color: #F1F0EA;
-  border: 3px solid ##474448;
-  border-radius: 20%;
+  border: 2px solid #474448;
+ 
 }
 
 .submit-button {
