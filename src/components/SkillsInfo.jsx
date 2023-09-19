@@ -24,7 +24,7 @@ function SkillsInfo() {
     };
   
     return (
-        <div>
+        <div className="skills-container">
           <h2>Technical Skills</h2>
           <div className="enter-skill">
             <input

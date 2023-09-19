@@ -50,6 +50,7 @@ function BasicInfo() {
 
   return (
     <div className="container-information">
+       <h2>Personal information</h2>
       {isRegistered ? (
         <>
           <p><FaSquarePhone />{phoneNumber}</p>
@@ -64,7 +65,7 @@ function BasicInfo() {
           </button>
         </>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form className="form-personal"onSubmit={handleSubmit}>
           <label>
            {" "}
             <input
