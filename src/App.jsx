@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import BasicInfo from './components/BasicInfo'
 import SkillsInfo from './components/SkillsInfo'
+import Languages from './components/Languages'
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
   </div>
       <BasicInfo />
       <SkillsInfo />
+      <Languages />
 
 
   <div className="footer">

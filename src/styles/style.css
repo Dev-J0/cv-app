@@ -173,7 +173,13 @@ ul {
   list-style: square;
 }
 
+/*Language */
 
+.language-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 
   @media print {
@@ -183,7 +189,8 @@ ul {
     .plus-button,
     .inspired,
     .header-h2,
-    .resume-title {
+    .resume-title,
+    .submit-button {
       display: none;
     }
     ::-webkit-input-placeholder {
