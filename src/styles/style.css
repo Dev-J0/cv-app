@@ -69,8 +69,6 @@ body {
   .header-h2 {
     position: relative;
     top: 1px;
-    
-    
   }
 
   .name-container {
@@ -84,6 +82,7 @@ body {
 
   .title-container {
     font-size: 25px;
+    gap: 10px;
   }
   
   .name-row {
@@ -122,12 +121,18 @@ body {
 }
 
 ::placeholder {
-  background-color: #474448;
+  background-color: #474448c5;
   color: #F1F0EA;
+  border: 3px solid ##474448;
+  border-radius: 20%;
 }
 
 .submit-button {
   background-color: #F1F0EA;
+  width: 35px;
+  height: 25px;
+  border-radius: 50%;
+
 }
 
 
