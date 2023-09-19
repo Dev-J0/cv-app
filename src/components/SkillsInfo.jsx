@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { TbSquareRoundedMinusFilled } from 'react-icons/tb'
-import { TbSquareRoundedPlusFilled } from 'react-icons/tb'
+import { AiFillMinusSquare } from 'react-icons/ai'
+import { BsFillPlusSquareFill } from 'react-icons/bs'
 
 function SkillsInfo() {
     const [skill, setSkill] = useState("");
@@ -33,14 +33,14 @@ function SkillsInfo() {
               value={skill}
               onChange={handleSkillChange}
             />
-            <button className="plus-button"onClick={addSkill}><TbSquareRoundedPlusFilled /></button>
+            <button className="plus-button"onClick={addSkill}><BsFillPlusSquareFill /></button>
           </div>
           <ul>
             {skillsList.map((s, index) => (
               <li key={index}>
                 {s}
                 <button className="remove-button" onClick={() => removeSkill(index)}>
-                  <TbSquareRoundedMinusFilled />
+                  <AiFillMinusSquare />
                 </button>
               </li>
             ))}

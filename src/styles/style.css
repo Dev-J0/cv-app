@@ -93,10 +93,10 @@ body {
 
   .edit-button,
   .reset-button {
-    background-color: #534B52;
+    background-color: #534b5200;
     color: #F1F0EA;
     border: none;
-    padding: 5px 10px;
+    padding: 2px 5px;
     margin-top: 10px;
     cursor: pointer;
     font-size: 16px;
@@ -104,7 +104,7 @@ body {
 
 .done-editing {
   border: solid 2px black;
-  background-color: #F1F0EA;
+  background-color: #f1f0ea00;
   color: #333;
   font-size: 45px;
 }
@@ -120,7 +120,7 @@ body {
   left: 250px;
 }
 
-::placeholder {
+::placeholder header{
   background-color: #474448c5;
   color: #F1F0EA;
   border: 2px solid #474448;
@@ -128,14 +128,19 @@ body {
 }
 
 .submit-button {
-  background-color: #F1F0EA;
-  width: 35px;
-  height: 25px;
-  border-radius: 50%;
+  background-color: #f1f0ea00;
+
+  
+  
 
 }
 
+.remove-button,
+.plus-button {
+  background-color: #33333300;
+  color: #474448;
 
+}
 
 
 

@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { GrValidate } from "react-icons/gr"
+import { BsFillCheckCircleFill } from "react-icons/bs"
+import { BiSolidMessageSquareEdit } from "react-icons/bi"
+import { GrPowerReset } from "react-icons/gr"
 
 function Header() {
   const [firstName, setFirstName] = useState('');
@@ -61,10 +63,10 @@ function Header() {
           </div>
           <div className="header-buttons">
             <button className="edit-button" onClick={handleEdit}>
-              Edit
+             <BiSolidMessageSquareEdit />
             </button>
             <button className="reset-button" onClick={handleReset}>
-              Reset
+              <GrPowerReset />
             </button>
             </div>
           </>
@@ -98,7 +100,7 @@ function Header() {
               />
             </label>
             <button className="submit-button" type="submit">
-               <GrValidate />
+               <BsFillCheckCircleFill />
             </button>
           </form>
         )}

@@ -3,6 +3,9 @@ import { FaSquarePhone } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { CgWebsite } from 'react-icons/cg';
 import { FaLocationDot } from 'react-icons/fa6'
+import { BiSolidMessageSquareEdit } from 'react-icons/bi'
+import { GrPowerReset } from "react-icons/gr"
+import { BsFillCheckCircleFill } from "react-icons/bs"
 
 function BasicInfo() {
  
@@ -46,7 +49,7 @@ function BasicInfo() {
   };
 
   return (
-    <div className="Basic-Info">
+    <div className="container-information">
       {isRegistered ? (
         <>
           <p><FaSquarePhone />{phoneNumber}</p>
@@ -54,10 +57,10 @@ function BasicInfo() {
           <p><CgWebsite /></p>
           <p><FaLocationDot /></p>
           <button className="edit-button" onClick={handleEdit}>
-            Edit
+            <BiSolidMessageSquareEdit />
           </button>
           <button className="reset-button" onClick={handleReset}>
-            Reset
+            <GrPowerReset />
           </button>
         </>
       ) : (
@@ -92,7 +95,7 @@ function BasicInfo() {
         </label>
 
           <button className="submit-button" type="submit">
-            Validate information
+            <BsFillCheckCircleFill />
           </button>
         </form>
       )}
