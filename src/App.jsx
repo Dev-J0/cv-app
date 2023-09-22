@@ -6,6 +6,7 @@ import BasicInfo from './components/BasicInfo'
 import SkillsInfo from './components/SkillsInfo'
 import Languages from './components/Languages'
 import EducationInfo from './components/EducationInfo'
+import WorkExperience from './components/ExperienceInfo'
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
       <SkillsInfo />
       <Languages />
       <EducationInfo />
+      <WorkExperience />
 
   <div className="footer">
     <Footer />
