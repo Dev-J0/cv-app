@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import BasicInfo from './components/BasicInfo'
 import SkillsInfo from './components/SkillsInfo'
 import Languages from './components/Languages'
+import EducationInfo from './components/EducationInfo'
 
 function App() {
   
@@ -16,7 +17,7 @@ function App() {
       <BasicInfo />
       <SkillsInfo />
       <Languages />
-
+      <EducationInfo />
 
   <div className="footer">
     <Footer />

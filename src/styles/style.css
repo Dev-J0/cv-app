@@ -198,7 +198,7 @@ ul {
 .container-information h2,
  .skills-container h2,
  .language-container h2{
-  color: grey;
+  color: rgba(14, 94, 104, 0.699);
 }
 
 .container-information ::placeholder,
