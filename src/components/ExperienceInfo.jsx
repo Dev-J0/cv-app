@@ -10,7 +10,8 @@ function ExperienceInfo() {
     const [workTitle, setWorkTitle] = useState('');
     const [workplace, setWorkplace] = useState('');
     const [jobResponsabilities, setJobResponsabilities] = useState('');
-
+    const [workYear, setWorkYear] = useState('');
+    const [quitWork, setQuitWork] = useState('');
 
 
 
