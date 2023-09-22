@@ -28,7 +28,7 @@ function EducationInfo() {
 
       const addUniversity = () => {
         if (university.trim() === "" || enrollmentYear === "" || graduationYear === "") {
-          // Handle validation or display an error message
+         
           return;
         }
       
@@ -72,9 +72,7 @@ function EducationInfo() {
               onChange={handleGraduationYearChange}
             />
           </label>
-          <button onClick={addUniversity}>Add University</button>
-      
-      
+          <button onClick={addUniversity}>Add University</button>  
        
           <ul>
             {universities.map((item, index) => (
