@@ -24,12 +24,12 @@ function BasicInfo() {
     setLocation(e.target.value)
 };
 
-  const handlePhoneNumberChange = (event) => {
-    setPhoneNumber(event.target.value)
+  const handlePhoneNumberChange = (e) => {
+    setPhoneNumber(e.target.value)
   };
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -55,8 +55,8 @@ function BasicInfo() {
         <>
           <p><FaSquarePhone />{phoneNumber}</p>
           <p><MdEmail /> {email}</p>
-          <p><CgWebsite /></p>
-          <p><FaLocationDot /></p>
+          <p><CgWebsite />{website}</p>
+          <p><FaLocationDot />{location}</p>
           <button className="edit-button" onClick={handleEdit}>
             <BiSolidMessageSquareEdit />
           </button>
@@ -86,15 +86,20 @@ function BasicInfo() {
           </label>
         <label>
             {" "}
-            <input type="text" placeholder="Website" value ={website} onChange={handleWebsiteChange}
+            <input type="text"
+             placeholder="Website"
+              value ={website} 
+              onChange={handleWebsiteChange}
             />
         </label>
         <label>
             {" "}
-            <input type="text" placeholder="Location" value={location} onChange={handleLocationChange}
+            <input type="text" 
+            placeholder="Location" 
+            value={location}
+             onChange={handleLocationChange}
             />
         </label>
-
           <button className="submit-button" type="submit">
             <BsFillCheckCircleFill />
           </button>

@@ -14,21 +14,19 @@ body {
 .header {
     width: 100%;
     max-height: 120px;
-    background-color: #534B52; 
-    color: #F1F0EA;
+    background-color: #213c3dfb; 
+    color: #D9D9D9;
     position: fixed;
     top: 0;
     left: 0;
     font-size: 10px;
-    
-
   }
 
   .footer {
     width: 100%;
     height: 40px;
-    background-color: #534B52; 
-    color: #F1F0EA;
+    background-color: #213c3dfb; 
+    color: #D9D9D9;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -182,6 +180,32 @@ ul {
 }
 
 
+
+.header input {
+  background-color: #d9d9d910;
+}
+
+.header ::placeholder {
+  color: rgb(189, 184, 184);
+}
+
+.container-information input, 
+.skills-container input,
+.language-container input{
+  background-color: rgba(54, 58, 58, 0.678);
+}
+
+.container-information h2,
+ .skills-container h2,
+ .language-container h2{
+  color: grey;
+}
+
+.container-information ::placeholder,
+.skills-container ::placeholder,
+.language-container ::placeholder {
+  color: rgb(174, 180, 184);
+}
   @media print {
     .remove-button,
     .reset-button,

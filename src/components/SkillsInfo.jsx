@@ -47,40 +47,8 @@ function SkillsInfo() {
           </ul>
         </div>
       );
-    };
+    }
   
 
-    function Languages() {
-      const [language, setLanguage] = useState("");
-      const [languageList, setLanguageList] = useState([]);
-
-      const handleLanguageChange = (e) => {
-        setLanguage(e.target.value);
-      };
-
-      const addLanguage = () => {
-        if(language.trim() !=="") {
-          setLanguageList([...languageList,language]);
-          setLanguage("");
-        };
-      };
-
-      const removeLanguage = (index) => {
-        const updatedLanguage = [...languageList];
-        updatedLanguage.splice(index, 1);
-        setLanguageList(updatedLanguage);
-      };
-
-      return (
-        <div className="language-container">
-          <h2>Languages</h2>
-          <div className="enter-language">
-            <input type="text" placeholder="Enter a language" value={language} onChange={handleLanguageChange}
-            />
-          </div>
-        </div>
-      )
-
-    }
 
 export default SkillsInfo;
