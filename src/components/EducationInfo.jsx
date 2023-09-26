@@ -28,10 +28,8 @@ function EducationInfo() {
 
       const addUniversity = () => {
         if (university.trim() === "" || enrollmentYear === "" || graduationYear === "") {
-         
           return;
-        }
-      
+        } 
         setUniversities([
           ...universities,
           {

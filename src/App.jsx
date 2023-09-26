@@ -2,28 +2,22 @@ import './App.css'
 import './styles/style.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import BasicInfo from './components/BasicInfo'
-import SkillsInfo from './components/SkillsInfo'
-import Languages from './components/Languages'
-import EducationInfo from './components/EducationInfo'
-import WorkExperience from './components/ExperienceInfo'
+import SideBar from './components/SideBar'
+import MainContent from './components/MainContent'
 
 function App() {
-  
   return (
     <>
-   <div className="header">
-       <Header />
-  </div>
-      <BasicInfo />
-      <SkillsInfo />
-      <Languages />
-      <EducationInfo />
-      <WorkExperience />
-
-  <div className="footer">
-    <Footer />
-  </div>
+      <div className="header">
+        <Header />
+      </div>
+      <div className="main">
+      <SideBar />
+      <MainContent />
+      </div>
+      <div className="footer">
+        <Footer />
+      </div>
     </>
   )
 }
