@@ -27,7 +27,12 @@ function Languages() {
       <div className="language-container">
         <h2>Languages</h2>
         <div className="enter-language">
-          <input type="text" placeholder="Enter a language" value={language} onChange={handleLanguageChange}
+          <input 
+          type="text"
+          id="language"
+           placeholder="Enter a language" 
+           value={language}
+           onChange={handleLanguageChange}
           />
           <button className="plus-button" onClick={addLanguage}><BsFillPlusSquareFill /></button>
         </div>

@@ -12,8 +12,10 @@ function App() {
         <Header />
       </div>
       <div className="main">
+        <div className="mainContent-container">
+        <MainContent />
+        </div>
       <SideBar />
-      <MainContent />
       </div>
       <div className="footer">
         <Footer />

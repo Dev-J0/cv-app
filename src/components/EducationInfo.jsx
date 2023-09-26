@@ -46,10 +46,12 @@ function EducationInfo() {
       return (
         <div>
           <h2>Education Background</h2>
+          <div className="containerEducation">
           <label>
           College/Institute/School
             <input
               type="text"
+              id="uni"
               value={university}
               onChange={handleUniversityChange}
             />
@@ -58,6 +60,7 @@ function EducationInfo() {
             Enrollment Year:
             <input
               type="text"
+              id="enrollmentyear"
               value={enrollmentYear}
               onChange={handleEnrollmentYearChange}
             />
@@ -66,12 +69,14 @@ function EducationInfo() {
             Graduation Year:
             <input
               type="text"
+              id="graduationyear"
               value={graduationYear}
               onChange={handleGraduationYearChange}
             />
           </label>
           <button onClick={addUniversity}>Add University</button>  
-       
+       </div>
+
           <ul>
             {universities.map((item, index) => (
               <li key={index}>

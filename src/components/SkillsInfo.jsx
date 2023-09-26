@@ -29,6 +29,7 @@ function SkillsInfo() {
           <div className="enter-skill">
             <input
               type="text"
+              id="skill"
               placeholder="Enter a skill"
               value={skill}
               onChange={handleSkillChange}

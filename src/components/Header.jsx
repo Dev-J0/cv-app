@@ -75,6 +75,7 @@ function Header() {
             <label>
               <input
                 type="text"
+                id="firstname"
                 placeholder="First Name"
                 value={firstName}
                 onChange={handleFirstNameChange}
@@ -84,6 +85,7 @@ function Header() {
             <label>
               <input
                 type="text"
+                id="lastname"
                 placeholder="Last Name"
                 value={lastName}
                 onChange={handleLastNameChange}
@@ -93,6 +95,7 @@ function Header() {
             <label>
               <input
                 type="text"
+                id="title"
                 placeholder="Title"
                 value={title}
                 onChange={handleTitleChange}

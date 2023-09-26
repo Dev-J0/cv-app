@@ -69,7 +69,8 @@ function BasicInfo() {
           <label>
            {" "}
             <input
-              type="number"
+              type="tel"
+              id="phonenr"
               placeholder="Phone"
               value={phoneNumber}
               onChange={handlePhoneNumberChange}
@@ -79,28 +80,34 @@ function BasicInfo() {
            {" "}
             <input
               type="email"
+              id="email"
               placeholder="Email"
+              autoComplete="on"
               value={email}
               onChange={handleEmailChange}
             />
           </label>
         <label>
             {" "}
-            <input type="text"
-             placeholder="Website"
+            <input
+              type="text"
+              id="website"
+              placeholder="Website"
               value ={website} 
               onChange={handleWebsiteChange}
             />
         </label>
         <label>
             {" "}
-            <input type="text" 
+            <input
+            type="text" 
+            id="location"
             placeholder="Location" 
             value={location}
              onChange={handleLocationChange}
             />
         </label>
-          <button className="submit-button" type="submit">
+          <button className="submit-button" id="basicinfobutton" type="submit">
             <BsFillCheckCircleFill />
           </button>
         </form>
