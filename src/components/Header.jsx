@@ -2,6 +2,10 @@ import { useState } from "react";
 import { BsFillCheckCircleFill } from "react-icons/bs"
 import { BiSolidMessageSquareEdit } from "react-icons/bi"
 import { GrPowerReset } from "react-icons/gr"
+import html2pdf from "html2pdf.js";
+import { FaFilePdf } from "react-icons/fa";
+import { useRef } from "react"
+ 
 
 function Header() {
   const [firstName, setFirstName] = useState('');
@@ -9,6 +13,8 @@ function Header() {
   const [title, setTitle] = useState('');
   const [isRegistered, setIsRegistered] = useState(false);
   const [editMode, setEditMode] = useState(false);
+
+  const componentRef = useRef(null);
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
@@ -41,6 +47,25 @@ function Header() {
     setLastName('');
     setTitle('');
     setEditMode(false); 
+  };
+
+  
+  const handleDownload = () => {
+    const pdfOptions = {
+      margin: 10,
+      filename: "your_resume.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+    };
+
+    html2pdf()
+      .from(componentRef.current)
+      .set(pdfOptions)
+      .outputPdf()
+      .then((pdf) => {
+        pdf.save();
+      });
   };
 
   return (
@@ -104,6 +129,9 @@ function Header() {
             </label>
             <button className="submit-button" type="submit">
                <BsFillCheckCircleFill />
+            </button>
+            <button className="download" onClick={handleDownload}>
+              <FaFilePdf /> 
             </button>
           </form>
         )}

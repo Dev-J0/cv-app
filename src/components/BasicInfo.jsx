@@ -53,10 +53,10 @@ function BasicInfo() {
        <h2>Personal information</h2>
       {isRegistered ? (
         <>
-          <p><FaSquarePhone />{phoneNumber}</p>
-          <p><MdEmail /> {email}</p>
-          <p><CgWebsite />{website}</p>
-          <p><FaLocationDot />{location}</p>
+          <p id="emoticon"><FaSquarePhone />{phoneNumber}</p>
+          <p id="emoticon"><MdEmail /> {email}</p>
+          <p id="emoticon"><CgWebsite />{website}</p>
+          <p id="emoticon"><FaLocationDot />{location}</p>
           <button className="edit-button" onClick={handleEdit}>
             <BiSolidMessageSquareEdit />
           </button>
