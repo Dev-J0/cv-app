@@ -224,7 +224,7 @@ ul {
 }
 
 .mainContent-component1 {
-  background-color:;
+
   height: 30%;
   display: flex;
   border: 1px ridge white;
@@ -236,7 +236,7 @@ ul {
 
 
 .mainContent-component2 {
-  background-color: ;
+
   height: 75%;
   display: flex;
   border: 1px ridge white;
@@ -270,6 +270,27 @@ ul {
 .language-container ::placeholder {
   color: rgb(174, 180, 184);
 }
+
+#downloadButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 100px;
+   background: transparent;
+  border: none;
+  font-size: 30px;
+  padding: 3px;
+
+}
+
+
+
+
+
+
+
+
+
   @media print {
     .remove-button,
     .reset-button,

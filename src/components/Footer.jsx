@@ -1,6 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { HiAcademicCap } from "react-icons/hi"
-
+import CVGenerator from "./CVGenerator";
 
 
 function Footer() {
@@ -22,6 +22,7 @@ function Footer() {
       <a href={odinLink} target="_blank" rel="noopener noreferrer">
         <HiAcademicCap className="odin-icon" />
       </a>
+      <CVGenerator />
     </div>
   </div>
         </>

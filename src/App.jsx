@@ -5,7 +5,12 @@ import Footer from './components/Footer'
 import SideBar from './components/SideBar'
 import MainContent from './components/MainContent'
 
+
+
 function App() {
+
+
+
   return (
     <>
       <div className="header">
