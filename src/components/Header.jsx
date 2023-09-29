@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsFillCheckCircleFill } from "react-icons/bs"
 import { BiSolidMessageSquareEdit } from "react-icons/bi"
-import { GrPowerReset } from "react-icons/gr"
+import { RxReset } from "react-icons/rx"
 
 
  
@@ -72,7 +72,7 @@ function Header() {
              <BiSolidMessageSquareEdit />
             </button>
             <button className="reset-button" onClick={handleReset}>
-              <GrPowerReset />
+              <RxReset />
             </button>
             </div>
           </>
