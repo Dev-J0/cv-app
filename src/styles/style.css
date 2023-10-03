@@ -25,7 +25,7 @@ body {
   .footer {
     width: 100%;
     height: 40px;
-    background-color: #213c3dfb; 
+    background-color: #213c3da1; 
     color: #D9D9D9;
     position: fixed;
     bottom: 0;
@@ -149,14 +149,14 @@ body {
 .sidebar-container {
   display: flex;
   flex-direction: column;
-  max-width: 250px; 
+  max-width: 290px; 
   justify-content: flex-start;
-  background-color: rgb(219, 201, 166);
-  padding-top: 40px;
+  background-color: rgb(224, 212, 187);
+  padding-top: 10px;
   top: 0;
   right: 0;
   bottom: 0;
-  text-align: left;
+ 
   height: calc(100vh - 40px); 
   overflow-y: auto;
   position: fixed;
@@ -172,11 +172,86 @@ body {
 
 }
 
-.sidebar-component input {
-  margin: 5px;
-  border: none;
+#sidebar-component1 {
+  text-align: left;
 }
 
+#sidebar-component2 {
+  margin-top: 20px;
+  text-align: right;
+  margin-right: 50px;
+}
+
+#sidebar-component2 button {
+  position: absolute;
+}
+
+#sidebar-component3 {
+  text-align: right;
+  margin-right: 50px;
+}
+
+
+.sidebar-component input {
+  margin: 4px;
+  border: none;
+  width: 180px;
+  padding: 6px 8px;
+
+}
+
+input {
+  border: 2px solid rgba(150, 149, 149, 0.418);
+
+}
+
+.Basic-Info input {
+  border: none;
+  border-bottom: 2px solid rgb(156, 154, 154);
+  background: none;
+
+}
+
+input:focus {
+  border: 2px solid #0ccfddbe;
+}
+
+
+.header,
+.mainContent-container input {
+  transition: width 1s ease;
+}
+
+input:focus {
+  outline: none;
+}
+
+ .header input:focus {
+  width: 50%;
+}
+
+
+.mainContent-component2 input {
+  background-color: rgba(199, 211, 199, 0.863);
+  border: none;
+  border-bottom: 2px solid rgb(156, 154, 154);
+  background-color: transparent;
+}
+
+.mainContent-component1 input {
+  border: none;
+  border-bottom: 2px solid rgb(156, 154, 154);
+  background-color: transparent;
+}
+
+.mainContent-component2 input:focus {
+  width: 40%;
+
+}
+
+.mainContent-component1 input:focus {
+  width: 40%;
+}
 
  #basicinfobutton {
  position: absolute;
@@ -192,12 +267,13 @@ body {
 .main {
   display: flex;
 min-height: 70vh;
-  max-width: 80%;
+max-width: calc(100% - 250px);
   gap: 50px;
   font-size: 11px;
   justify-content: flex-start;
   align-items: flex-start;
   letter-spacing: 1px;
+  margin-right: 300px;
   
 }
 
@@ -225,41 +301,45 @@ min-height: 70vh;
  overflow-y: auto;
 }
 
+.mainContent-container button {
+  background:transparent;
+  color: #0c0c0b;
+  border: none;
+  padding: 2px 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
 .mainContent-component1 {
 
   height: 30%;
   display: flex;
-  border: 1px ridge white;
   padding-top: 30px;
   padding-right: 10px;
   flex-grow: 1;
-  flex-basis: 200
+  flex-basis: 200;
+  color: rgb(77, 74, 74);
+  
 }
+
 
 
 .mainContent-component2 {
 
   height: 75%;
   display: flex;
-  border: 1px ridge white;
   margin-top: 20px;
   padding-top: 30px;
-  padding-right: 30px;
+  color: rgb(87, 83, 83);
 }
 
-.header input {
-  background-color: #d9d9d910;
-}
 
 .header ::placeholder {
   color: rgb(189, 184, 184);
 }
 
-.container-information input, 
-.skills-container input,
-.language-container input{
-  background-color: rgba(54, 58, 58, 0.678);
-}
 
 .container-information h2,
  .skills-container h2,
@@ -363,27 +443,13 @@ li {
   background: rgb(48, 47, 46);        /* color of the tracking area */
 }
 
-..mainContent-component1::-webkit-scrollbar-thumb {
+.mainContent-component1::-webkit-scrollbar-thumb {
   background-color: rgba(31, 105, 87, 0.527);    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 0.5px solid rgba(221, 214, 201, 0.534);  /* creates padding around scroll thumb */
 }
 
 
-
-.mainContent-component2::-webkit-scrollbar {
-  width: 13px;               /* width of the entire scrollbar */
-}
-
-.mainContent-component2::-webkit-scrollbar-track {
-  background: rgb(48, 47, 46);        /* color of the tracking area */
-}
-
-..mainContent-component2::-webkit-scrollbar-thumb {
-  background-color: rgba(31, 105, 87, 0.527);    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 0.5px solid rgba(221, 214, 201, 0.534);  /* creates padding around scroll thumb */
-}
 
 .mainContent-container::-webkit-scrollbar {
   width: 13px;               /* width of the entire scrollbar */
@@ -393,7 +459,7 @@ li {
   background: rgb(48, 47, 46);        /* color of the tracking area */
 }
 
-..mainContent-container::-webkit-scrollbar-thumb {
+.mainContent-container::-webkit-scrollbar-thumb {
   background-color: rgba(31, 105, 87, 0.527);    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 0.5px solid rgba(221, 214, 201, 0.534);  /* creates padding around scroll thumb */
@@ -402,6 +468,18 @@ li {
 
 
 @media print {
+
+  .footer {
+    color: rgb(207, 201, 201);
+  }
+
+  body {
+    background-color: white;
+    filter: grayscale();
+  }
+
+ 
+
   /* Hide unnecessary elements */
   .remove-button,
   .reset-button,
@@ -412,7 +490,9 @@ li {
   .resume-title,
   .submit-button,
   .containerEducation,
-  .experiencecontainer {
+  .experiencecontainer,
+  .container-information h2,
+  input {
     display: none;
   }
 
@@ -423,7 +503,16 @@ li {
   @page {
     size: A4;
     margin: 0cm;
+
   }
+
+
+  .Basic-Info {
+    background: grey;
+    z-index: 10;
+  }
+
+ 
 
   ::-webkit-input-placeholder {
 
@@ -456,7 +545,5 @@ li {
   }
 
  
-  body {
-    color: initial; 
-  }
+
 }

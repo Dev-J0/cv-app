@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {  BsFillPlusSquareFill } from "react-icons/bs"
 
 function WorkExperience() {
   const [workPlaceList, setWorkPlaceList] = useState([]); // Use a different name for the state variable
@@ -80,7 +81,7 @@ function WorkExperience() {
          value={quitWork} 
          onChange={handleQuitWorkChange} />
       </label>
-      <button onClick={addWork}>Add Work</button>
+      <button onClick={addWork}>< BsFillPlusSquareFill /></button>
     </div>
       <ul>
         {workPlaceList.map((item, index) => ( // Use workPlaceList to map the items

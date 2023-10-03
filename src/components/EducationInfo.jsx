@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import {  BsFillPlusSquareFill } from "react-icons/bs"
 //education background
 //university/institution/organization/school
 //program/degree
@@ -74,7 +74,7 @@ function EducationInfo() {
               onChange={handleGraduationYearChange}
             />
           </label>
-          <button onClick={addUniversity}>Add University</button>  
+          <button onClick={addUniversity}><BsFillPlusSquareFill /></button>  
        </div>
 
           <ul>
