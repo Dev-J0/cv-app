@@ -83,6 +83,7 @@ function WorkExperience() {
       </label>
       <button onClick={addWork}>< BsFillPlusSquareFill /></button>
     </div>
+    
       <ul>
         {workPlaceList.map((item, index) => ( // Use workPlaceList to map the items
           <li key={index}>
@@ -91,6 +92,7 @@ function WorkExperience() {
         ))}
       </ul>
     </div>
+    
   );
 }
 

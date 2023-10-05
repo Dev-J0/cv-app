@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Rubik:wght@500&display=swap');
+
+
+
 * {
     border: 0;
     margin: 0;
     box-sizing: border-box;
-    color-scheme: light dark;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bolder;
   }
 
 body {
@@ -20,6 +24,7 @@ body {
     top: 0;
     left: 0;
     font-size: 10px;
+
   }
 
   .footer {
@@ -126,7 +131,6 @@ body {
 
 ::placeholder header{
   background-color: #474448c5;
-  color: #F1F0EA;
   border: 2px solid #474448;
  
 }
@@ -197,6 +201,9 @@ body {
   border: none;
   width: 180px;
   padding: 6px 8px;
+  background: transparent;
+  border-bottom: 2px solid grey;
+  color: darkslategrey;
 
 }
 
@@ -212,8 +219,12 @@ input {
 
 }
 
-input:focus {
+.header :focus {
   border: 2px solid #0ccfddbe;
+}
+
+.sidebar-container :focus {
+  border-bottom: 2px solid #0ccfddbe;
 }
 
 
@@ -228,6 +239,7 @@ input:focus {
 
  .header input:focus {
   width: 50%;
+  border-top: cyan;
 }
 
 
@@ -236,21 +248,28 @@ input:focus {
   border: none;
   border-bottom: 2px solid rgb(156, 154, 154);
   background-color: transparent;
+  color: darkolivegreen;
 }
+
+
 
 .mainContent-component1 input {
   border: none;
   border-bottom: 2px solid rgb(156, 154, 154);
   background-color: transparent;
+  color: darkolivegreen;
 }
 
 .mainContent-component2 input:focus {
   width: 40%;
+  border-bottom: 2px solid #0ccfddbe;
+
 
 }
 
 .mainContent-component1 input:focus {
   width: 40%;
+  border-bottom: 2px solid #0d99a3be;
 }
 
  #basicinfobutton {
@@ -314,13 +333,13 @@ max-width: calc(100% - 250px);
 
 .mainContent-component1 {
 
-  height: 30%;
+  height: 40%;
   display: flex;
   padding-top: 30px;
   padding-right: 10px;
   flex-grow: 1;
   flex-basis: 200;
-  color: rgb(77, 74, 74);
+  color: darkslategrey;
   
 }
 
@@ -328,7 +347,7 @@ max-width: calc(100% - 250px);
 
 .mainContent-component2 {
 
-  height: 75%;
+  height: 60%;
   display: flex;
   margin-top: 20px;
   padding-top: 30px;
@@ -350,7 +369,7 @@ max-width: calc(100% - 250px);
 .container-information ::placeholder,
 .skills-container ::placeholder,
 .language-container ::placeholder {
-  color: rgb(174, 180, 184);
+  color: darkslategrey;
 }
 
 #downloadButton {
@@ -547,3 +566,5 @@ li {
  
 
 }
+
+
