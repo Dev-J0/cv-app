@@ -4,7 +4,6 @@ import { BiSolidMessageSquareEdit } from "react-icons/bi"
 import { RxReset } from "react-icons/rx"
 
 
- 
 
 function Header() {
   const [firstName, setFirstName] = useState('');
