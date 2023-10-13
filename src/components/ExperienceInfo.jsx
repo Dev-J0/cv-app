@@ -102,7 +102,7 @@ function WorkExperience() {
                 </label>
               </form>
               {editMode ? (
-                <button className="submit-button" onClick={handleSummarySubmit}>
+                <button id="summary-button"className="submit-button" onClick={handleSummarySubmit}>
                   Submit
                 </button>
               ) : null}

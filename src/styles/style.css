@@ -11,7 +11,7 @@ body {
 }
 .header {
 	width: 100%;
-	max-height: 120px;
+	max-height: 150px;
 	background-color: #213c3dfb;
 	color: #D9D9D9;
 	position: fixed;
@@ -107,6 +107,12 @@ body {
 .submit-button {
 	background-color: #f1f0ea00;
 }
+
+#summary-button {
+	color: rgb(0, 0, 0);
+	border: 1px ridge rgb(24, 70, 51);
+}
+
 .remove-button,.plus-button {
 	background-color: #33333300;
 	color: #000000;
@@ -194,11 +200,10 @@ input:focus {
 	color: darkolivegreen;
 }
 .mainContent-component2 input:focus {
-	width: 40%;
+	
 	border-bottom: 2px solid #0ccfddbe;
 }
 .mainContent-component1 input:focus {
-	width: 40%;
 	border-bottom: 2px solid #0d99a3be;
 }
 #basicinfobutton {
@@ -288,6 +293,10 @@ h3 {
 	color: darkslategrey;
 	width: 90%;
 	text-align: cente;
+}
+
+.containerEducation input {
+	width: 90px;
 }
 .containerEducation {
 	margin-top: 20px;
@@ -420,16 +429,28 @@ li {
 	border: 0.5px solid rgba(221, 214, 201, 0.534);
 	/* creates padding around scroll thumb */
 }
+
+
 /* PRINT PRINT PRINT */
 @media print {
 	@page {
 		size: A4;
 		margin: 0cm;
 	}
+
+	* {
+		font-size: 20px;
+	}
+
+	.mainContent-component1 {
+		margin-top: 100px;
+	}
+
+	.mainContent-component2 {
+		margin-bottom: 100px;
+	}
 	.footer {
-		color: rgb(207, 201, 201);
-		position: fixed;
-		bottom: 0;
+		display: none;
 	}
 	body {
 		background-color: white;
@@ -442,8 +463,10 @@ li {
 	}
 
 
-
-  .experience-and-projects-container  {display: none};
+  .experience-and-projects-container  {
+    display: none;
+  }
+  
 	.github-icon {
 		color: black;
 	}
@@ -458,9 +481,11 @@ li {
 	header {
 		background-color: rgb(90, 94, 94);
 	}
-	.name-info,.container-information {
-		margin-top: 10px;
-		font-size: larger;
+	.name-info {
+		margin-top: 20px;
+		font-size: 30px;
+		padding-bottom: 10px;
+		margin-left: 20px;
 	}
 	::-webkit-input-placeholder {
 		color: initial;
@@ -482,7 +507,7 @@ li {
 	}
 	.header {
 		border: none;
-		height: 120px;
+		height: 130px;
 	}
 	#sidebar-component1 {
 		color: white;
@@ -491,3 +516,27 @@ li {
 		margin-top: 50px;
 	}
 }
+/* For the .main and other containers, show scrollbars when content exceeds their dimensions */
+.main, .mainContent-component2, .mainContent-container {
+    overflow: auto; /* Change from 'hidden' to 'auto' */
+}
+
+/* For webkit browsers like Chrome */
+.main::-webkit-scrollbar, .mainContent-component2::-webkit-scrollbar, .mainContent-container::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.main::-webkit-scrollbar-thumb, .mainContent-component2::-webkit-scrollbar-thumb, .mainContent-container::-webkit-scrollbar-thumb {
+    background: transparent; /* Hide scrollbar thumb */
+}
+
+/* For Firefox */
+.main {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; /* Hide scrollbar */
+}
+
+.main::-webkit-scrollbar-track, .mainContent-component2::-webkit-scrollbar-track, .mainContent-container::-webkit-scrollbar-track {
+    display: none; /* Hide scrollbar track */
+}
+
