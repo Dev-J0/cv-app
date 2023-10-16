@@ -94,7 +94,7 @@ function WorkExperience() {
                   About
                   <textarea
                     id="summary"
-                    placeholder="Say a few"
+                    placeholder="Write a few words about yourself! "
                     value={summary}
                     onChange={handleSummaryChange}
                     className={editMode ? "edit-mode" : ""}
@@ -110,6 +110,7 @@ function WorkExperience() {
           )}
         </div>
         <div className="experience-and-projects-container">
+          <div className="list1">
           <h3>Work</h3>
           <label>
             Work Place
@@ -121,7 +122,7 @@ function WorkExperience() {
             />
           </label>
           <label>
-            Title
+            Details
             <input
               type="text"
               id="worktitle"
@@ -154,7 +155,9 @@ function WorkExperience() {
           <button onClick={addProjects}>
             <BsFillPlusSquareFill />
           </button>
+          </div>
         </div>
+        <div className="list2">
         <div className="workList">
           <h3>Work</h3>
           <ul>
@@ -174,6 +177,7 @@ function WorkExperience() {
               </li>
             ))}
           </ul>
+          </div>
         </div>
       </div>
     </div>

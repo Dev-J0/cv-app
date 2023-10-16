@@ -217,7 +217,6 @@ input:focus {
 	display: flex;
 	min-height: 80vh;
 	max-width: calc(100% - 250px);
-	gap: 50px;
 	font-size: 11px;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -243,7 +242,7 @@ input:focus {
 	resize:vertical;
 	color: black;
 	font-size: 10px;
-	outline-style:double;
+	outline-style:none;
 	outline-color: #0d3a32;
 	display: flex;
 }
@@ -265,12 +264,11 @@ h3 {
 .mainContent-container {
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
 	justify-content: flex-start;
 	padding-left: 10px;
 	padding-right: 10px;
 	align-items: flex-start;
-	height: 70vh;
+	height: 80vh;
 	overflow-y: auto;
 	text-align: justify;
 }
@@ -312,6 +310,16 @@ h3 {
   width: 1000px;
   overflow:scroll;
 }
+
+.list1 {
+
+}
+
+
+ul li {
+    overflow-wrap: break-word;
+}
+
 .mainContent-component2 h2 {
 	width: 850px;
 }
